@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'war'
+apply plugin: 'jetty'
 
 repositories {
     mavenCentral()
@@ -11,6 +12,10 @@ dependencies {
 
     compile 'org.glassfish.jersey.core:jersey-server:2.4.1'
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.4.1'
+    compile 'org.springframework:spring-context:3.2.5.RELEASE'
+    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.4.1'
+    compile 'javax.json:javax.json-api:1.0'
+    compile 'org.glassfish:javax.json:1.0.3'
 
     testCompile "junit:junit:4.11"
 }

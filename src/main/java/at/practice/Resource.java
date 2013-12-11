@@ -1,13 +1,15 @@
 package at.practice;
 
+import org.springframework.stereotype.Component;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-@Path("rest")
+@Component
+@Path("ping")
 public class Resource {
 
     @GET
-    @Path("ping")
     public String ping() {
         return "Its running!";
     }
